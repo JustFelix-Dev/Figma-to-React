@@ -200,6 +200,7 @@ nav .links{
 .allProducts{
   display: flex;
   max-width: 100%;
+  padding: var(--space-xl);
 
 }
 
@@ -250,7 +251,40 @@ nav .links{
   flex: 0 0 65%;
    display: grid;
    grid-template-columns: 1fr 1fr;
-  border: 2px solid red;
+   align-items: start;
+   gap: calc(var(--space-xs) + 0.3rem);
+   padding-inline: var(--space-xl);
+}
+
+.allProducts .productCards > div img:not(.love) {
+  height: 400px;
+  aspect-ratio: 1/1;
+}
+
+/* New and Love */
+.header{
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  padding-inline: var(--space-xs);
+}
+.new{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:calc(var(--medium) + 200);
+  font-size: var(--font-md);
+  align-self: center;
+}
+.love{
+  align-self: center;
+  height: var(--space-sm);
+}
+
+.allProducts .productCards > div {
+  border-radius: calc(var(--space-xs) + 0.5rem);
+  overflow: hidden;
 }
 
 

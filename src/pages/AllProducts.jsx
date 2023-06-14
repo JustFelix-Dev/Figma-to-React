@@ -9,7 +9,7 @@ const AllProducts = () => {
              <Carousel/>
              <div className="allProducts">
              <div className="sidebar">
-                <ul className="first">
+                <ul className="first" style={{width:"250px"}}>
                     <span>All products</span>
                     <li style={{marginTop:"0.8rem"}}><a href="#">Living</a></li>
                     <li><a href="#">Dining</a></li>
@@ -34,7 +34,7 @@ const AllProducts = () => {
                     <li><a href="#">Medium</a></li>
                     <li><a href="#">Large</a></li>
                 </ul>
-                <ul className="fifth">
+                <ul className="fifth" style={{width:"250px"}}>
                     <span>Brands</span>
                     <li><a href="#">Lorem</a></li>
                     <li><a href="#">Lorem</a></li>
@@ -55,10 +55,18 @@ const AllProducts = () => {
                 </div>
              </div>
              <div className="productCards">
-                <div className="card one">
+                <div className="card one" style={{position:"relative"}}>
+                    <div className="header" >
+                        <span className="new">New</span>
+                        <img src="images/love.png" alt="love-icon" className="love" />
+                    </div>
                     <img src="images/image-1.png" alt="card" className="img-fluid" />
                 </div>
-                <div className="card two">
+                <div className="card two"style={{position:"relative"}} >
+                <div className="header" >
+                        <span className="new"></span>
+                        <img src="images/love.png" alt="love-icon" className="love" />
+                    </div>
                     <img src="images/image-2.png" alt="card" className="img-fluid" />
                 </div>
                 <div className="card three">
