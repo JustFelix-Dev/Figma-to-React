@@ -257,7 +257,7 @@ nav .links{
 }
 
 .allProducts .productCards > div img:not(.love) {
-  height: 400px;
+  height: 350px;
   aspect-ratio: 1/1;
 }
 
@@ -269,7 +269,7 @@ nav .links{
   position: absolute;
   width: 100%;
   justify-content: space-between;
-  padding-inline: var(--space-xs);
+  padding-inline: var(--space-md);
 }
 .new{
   font-family: 'Montserrat', sans-serif;
@@ -280,6 +280,27 @@ nav .links{
 .love{
   align-self: center;
   height: var(--space-sm);
+  font-weight:var(--medium);
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  padding-inline: var(--space-md);
+  padding-bottom: var(--space-xs);
+}
+.footer .name{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:calc(var(--medium) + 200);
+  font-size: var(--font-md);
+}
+.footer .price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight:calc(var(--medium) + 200);
+  font-size: var(--font-md);
+  color: #7A7979;
 }
 
 .allProducts .productCards > div {
