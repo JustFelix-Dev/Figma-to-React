@@ -10,7 +10,7 @@ function MultiRange() {
     };
     
     return(
-        <div>
+        <>
             <div className="range">
                 <MultiRangeSlider
                     min={0}
@@ -31,7 +31,7 @@ function MultiRange() {
                     <input type="button" value="Filter" />
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 export default MultiRange;

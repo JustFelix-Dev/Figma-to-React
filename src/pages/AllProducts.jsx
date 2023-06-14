@@ -11,11 +11,11 @@ const AllProducts = () => {
              <div className="sidebar">
                 <ul className="first">
                     <span>All products</span>
-                    <li><a href="#">Living</a></li>
+                    <li style={{marginTop:"0.8rem"}}><a href="#">Living</a></li>
                     <li><a href="#">Dining</a></li>
                     <li><a href="#">Furniture</a></li>
                     <li><a href="#">Technics</a></li>
-                    <li><a href="#">Accessories</a></li>
+                    <li style={{marginBottom:"1rem"}} ><a href="#">Accessories</a></li>
                 </ul>
                 <div className="second">
                     <span>Filter by</span>
@@ -25,11 +25,11 @@ const AllProducts = () => {
                     </div>
                 </div>
                 <div className="third">
-                    <span>Color</span>
+                    <span >Color</span>
                     <ColorPicker/>
                 </div>
                 <ul className="fourth">
-                    <span>Size</span>
+                    <span >Size</span>
                     <li><a href="#">Small</a></li>
                     <li><a href="#">Medium</a></li>
                     <li><a href="#">Large</a></li>
@@ -46,7 +46,7 @@ const AllProducts = () => {
                     <li><a href="#">Lorem</a></li>
                     <li><a href="#">Lorem</a></li>
                     <li><a href="#">Lorem</a></li>
-                    <li><a href="#">Lorem</a></li>
+                    <li style={{marginBottom:"1rem"}} ><a href="#">Lorem</a></li>
                 </ul>
                 <div className="sixth">
                     <span>Popular Tags</span>
@@ -55,6 +55,25 @@ const AllProducts = () => {
                 </div>
              </div>
              <div className="productCards">
+                <div className="card one">
+                    <img src="images/image-1.png" alt="card" className="img-fluid" />
+                </div>
+                <div className="card two">
+                    <img src="images/image-2.png" alt="card" className="img-fluid" />
+                </div>
+                <div className="card three">
+                    <img src="images/image-3.png" alt="card" className="img-fluid" />
+                </div>
+                <div className="card four">
+                    <img src="images/image-4.png" alt="card" className="img-fluid" />
+                </div>
+                <div className="card five">
+                    <img src="images/image-5.png" alt="card" className="img-fluid" />
+                </div>
+                <div className="card six">
+                    <img src="images/image-6.png" alt="card"  className="img-fluid" />
+                </div>
+
 
              </div>
              </div>
