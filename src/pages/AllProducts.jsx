@@ -3,6 +3,8 @@ import Carousel from "../components/Carousel";
 import MultiRange from "../components/MultiRange";
 import ColorPicker from "../components/ColorPicker";
 import { Link } from "react-router-dom";
+import Pagination from "../components/Pagination";
+import Footer from "../components/Footer";
 
 const AllProducts = () => {
     return ( 
@@ -98,7 +100,11 @@ const AllProducts = () => {
                 </Link>  
              </div>
              </div>
-             
+             <Pagination/>
+             <Footer/>
+             <div className="empty">
+                
+             </div>
             </>
      );
 }
