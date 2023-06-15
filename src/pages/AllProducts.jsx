@@ -5,11 +5,13 @@ import ColorPicker from "../components/ColorPicker";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import Menubar from "../components/Menubar";
 
 const AllProducts = () => {
     return ( 
             <>
              <Carousel/>
+             <Menubar/>
              <div className="allProducts">
              <div className="sidebar">
                 <ul className="first" style={{width:"250px"}}>
