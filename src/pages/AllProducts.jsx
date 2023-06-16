@@ -41,7 +41,7 @@ const AllProducts = () => {
          </div>
              <div className="allProducts">
              <div className={ open ? 'sidebar active' : "sidebar"}>
-                <span onClick={handleDefault} style={{fontSize:"1.2rem",fontWeight:"700",position:"absolute",right:"1rem",top:"0.3rem"}}> <img src="images/menu-back.png" alt="menu-back Icon" /></span>
+                <span className="menuBack" onClick={handleDefault} style={{fontSize:"1.2rem",fontWeight:"700",position:"absolute",right:"1rem",top:"0.3rem"}}> <img src="images/menu-back.png" alt="menu-back Icon" /></span>
                 <ul className="first" style={{width:"250px"}}>
                     <span>All products</span>
                     <li style={{marginTop:"0.8rem"}}><a href="#">Living</a></li>
