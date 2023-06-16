@@ -25,6 +25,45 @@
   --space-xxl: 4.2rem;
 }
 
+/* MenuBar */
+.menubar {
+  display: none;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.menubar .menu {
+  display: flex;
+  gap: var(--space-xs);
+}
+.menubar .menu .first{
+  font-family: 'Montserrat', sans-serif;
+  font-weight:calc(var(--medium) + 200);
+  font-size: var(--font-sm);
+}
+.menubargroup2{
+  display: flex;
+  gap: 1rem;
+}
+.menubar .sort {
+  margin-left: 4rem;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:calc(var(--medium) + 200);
+  font-size: var(--font-sm);
+}
+.menubar .sort .second {
+  align-self: center;
+}
+
+.menubar .result {
+ color :#7A7979;
+ font-family: 'Montserrat', sans-serif;
+  font-weight:var(--normal);
+  font-size: var(--font-sm);
+
+}
+
 /* Color Picker */
 .contain{
   display: flex;
@@ -116,6 +155,7 @@
 img{
   display: block;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .carousel-item {
@@ -177,9 +217,17 @@ nav .links{
 }
 
 .links .cart{
+  display: flex;
+  gap :var(--space-sm);
   align-self: center;
 }
 
+.links .cart img:first-child{
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:var(--medium);
+  font-size: var(--font-md);
+}
 .links ul li a {
   text-decoration: none;
   color: #000;
@@ -204,13 +252,12 @@ nav .links{
   padding-right: var(--space-xl);
   padding-top: var(--space-xl);
   padding-bottom: 0 ;
-
+  border: 2px solid red;
 }
 
 /* SIDEBAR */
 .allProducts .sidebar{
   flex: 0 0 35%;
-  border: 2px solid green;
 }
 .sidebar ul {
   list-style-type: none;
@@ -253,7 +300,6 @@ nav .links{
 /* Product Cards */
 .allProducts .productCards{
   flex: 0 0 65%;
-  border: 1px solid red;
    display: grid;
    grid-template-columns: 1fr 1fr;
    align-items: start;
@@ -384,15 +430,61 @@ footer .details button:hover{
   padding-block:1.5rem;
 }
 
+/* Responsiveness */
 @media screen and (max-width:1024px){
+  .allProducts {
+    position: relative;
+    padding-top: var(--space-sm);
+  }
+  .menubar{
+    display: flex;
+  }
   .allProducts .sidebar{
-    /* flex: 0 0 ; */
-    display: none;
-    background-color: brown;
+    padding-top: var(--space-md);
+    position: absolute;
+    transform: translateX(-110%);
+    transition: all ease-in 300ms;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 300px;
+    overflow: auto;
+    background-color: #fff;
+    box-shadow: 0 0 3px 0 rgb(231, 228, 228), 0 0 5px 0 #000;
+  }
+  .allProducts .sidebar.active {
+    transform : translateX(0);
   }
   .allProducts .productCards{
     flex: 0 0 100%;
   }
 }
+
+@media screen and (max-width:750px){
+    .allProducts{
+      padding-left: var(--space-xxs);
+      padding-right: var(--space-xxs);
+    }
+}
+
+@media screen and (max-width:730px){
+  html{
+    font-size: 14px;
+  }
+  nav{
+    padding-inline: var(--space-md);
+  }
+}
+
+@media screen and (max-width:570px){
+  .links ul {
+    display: none;
+  }
+  .links .cart img:first-child{
+    display: flex;
+  }
+}
+
 
 

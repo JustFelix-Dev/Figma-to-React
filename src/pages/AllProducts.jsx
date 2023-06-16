@@ -1,19 +1,47 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Carousel from "../components/Carousel";
 import MultiRange from "../components/MultiRange";
 import ColorPicker from "../components/ColorPicker";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
-import Menubar from "../components/Menubar";
+
 
 const AllProducts = () => {
+    const [ open,setOpen ] = useState(false)
+    const slideRef = useRef()
+
+    const handleChange = ()=>{
+        setOpen(true)
+        slideRef.current.style.display ="none"
+    }
+
+    const handleDefault = () =>{
+        setOpen(false)
+        slideRef.current.style.display ="flex"
+    }
     return ( 
             <>
              <Carousel/>
-             <Menubar/>
+             <div className="menubar">
+            <div className="menu" >
+                <span className='first'>Menu</span>
+                <span onClick={handleChange} className='second'><img ref={slideRef} src="images/menu.png" alt="hamburger-menu" height={26}/></span>
+            </div>
+            <div className="menubargroup2">
+            <div className="sort">
+                <span className='first'>Sort by: A-Z</span>
+                <span className='second'><img src="images/chevron-down.png" alt="dropdown arrow"height={19} />
+                </span>
+            </div>
+            <div className="result">
+                <span>Showing 1 - 12 of 24 results</span>
+            </div>
+            </div>
+         </div>
              <div className="allProducts">
-             <div className="sidebar">
+             <div className={ open ? 'sidebar active' : "sidebar"}>
+                <span onClick={handleDefault} style={{fontSize:"1.2rem",fontWeight:"700",position:"absolute",right:"1rem",top:"0.3rem"}}> <img src="images/menu-back.png" alt="menu-back Icon" /></span>
                 <ul className="first" style={{width:"250px"}}>
                     <span>All products</span>
                     <li style={{marginTop:"0.8rem"}}><a href="#">Living</a></li>

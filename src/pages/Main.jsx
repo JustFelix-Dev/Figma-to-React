@@ -15,6 +15,7 @@ const Main = () => {
                         <li><a href="#">FAQ</a></li>
                     </ul>
                     <div className="cart">
+                        <img src="images/menu.png" alt="hamburger-menu" />
                         <img src="images/shopping-bag.png" alt="cart" />
                     </div>
                 </div>
