@@ -14,7 +14,7 @@ const Navbar = ({showNav=true}) => {
     }
   return (
           <>
-          <nav>
+          <nav className={showNav ? '' : 'productsPage'}>
                <div className="minimal">
                    <span>Minimal.</span>
                </div>

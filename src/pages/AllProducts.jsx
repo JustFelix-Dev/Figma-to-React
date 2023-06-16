@@ -5,6 +5,7 @@ import ColorPicker from "../components/ColorPicker";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 
 const AllProducts = () => {
@@ -22,6 +23,7 @@ const AllProducts = () => {
     }
     return ( 
             <>
+             <Navbar/>
              <Carousel/>
              <div className="menubar">
             <div className="menu" >
