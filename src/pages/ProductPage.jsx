@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 
 const ProductPage = () => {
+    const [ price, setPrice] = useState(69)
+    const [ height, setHeight ] = useState('52cm')
+    const [ width, setWidth ] = useState('42cm')
+    const [ cartNo, setCartNo] = useState(1)
+
+    const handleInches=()=>{
+        setHeight('20.5 inc.')
+        setWidth('16.5 inc.')
+    }
+
+    const handleAddCart=()=>{
+        setCartNo(cartNo + 1)
+        setPrice(price * 2)
+    }
+    const handleMinusCart=()=>{
+        if(cartNo > 1){
+            setCartNo(cartNo - 1)
+            setPrice(price / 2)
+        }
+    }
+
   return (
        <>
        <Navbar showNav={false}/>
@@ -28,24 +49,32 @@ const ProductPage = () => {
             </div>
             <div className="measurements">
                 <div className="aspect-ratio">
-                    <div className="height"></div>
-                    <div className="width"></div>
+                    <div className="height">
+                        <span>HEIGHT</span>
+                        <span className="text">{height}</span>
+                    </div>
+                    <div className="width">
+                        <span>WIDTH</span>
+                        <span className='text'>{width}</span>
+                    </div>
                 </div>
                 <div className="size">
-                    <span>Size in Inches</span>
+                    <span onClick={handleInches}>size in inches</span>
                 </div>
             </div>
-            HEIGHT
-            WIDTH
-            Size in Inches
-            52 cm
-            43 cm
-            $69.00
-            1
-            ADD TO CART
-            BUY NOW
+                {
+                 <div className='price'>${price}.00</div>
+                 }
+           <div className="cartCount">
+            <span onClick={handleMinusCart}><img src="images/minusCart.png" alt="minusImg"/></span>
+            <span  className='number'>{cartNo}</span>
+            <span onClick={handleAddCart}> <img src="images/addCart.png" alt="addCart"/></span>
+           </div>
+           <div className="cartButtons">
+              <button>ADD TO CART</button>
+              <button>BUY NOW</button>
+           </div>
         </div>
-      
        </div>
        
        </>
