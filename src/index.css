@@ -226,7 +226,7 @@ nav .links{
   display: none;
   font-family: 'Montserrat', sans-serif;
   font-weight:var(--medium);
-  font-size: var(--font-md);
+  font-size: var(--font-lg);
 }
 .links ul li a {
   text-decoration: none;
@@ -480,6 +480,12 @@ footer .details button:hover{
 @media screen and (max-width:570px){
   .links ul {
     display: none;
+    position: absolute;
+    top:0;
+    right: 0;
+  }
+  .links ul.active{
+    display: flex;
   }
   .links .cart img:first-child{
     display: flex;
