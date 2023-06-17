@@ -724,7 +724,7 @@ footer .details button:hover{
   opacity: 1;
 }
 
-@media screen and (max-width:965px){
+/* @media screen and (max-width:965px){
   .productDetails{
     flex-direction: column;
   }
@@ -735,7 +735,7 @@ footer .details button:hover{
   .productDetails .Texts {
     width: 100%;
   }
-}
+} */
 
 
 
