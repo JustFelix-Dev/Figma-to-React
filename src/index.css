@@ -587,75 +587,72 @@ footer .details button:hover{
   display: flex;
   margin-inline: var(--space-xxl);
   gap: var(--space-xxl);
-  border: 3px solid green;
 }
 .productDetails .Images {
-  border: 2px solid red;
   flex: 0 0 40%;
   width: 40%;
 }
 .productDetails .Images .main{
   display: flex;
   justify-content: center;
-  border: 1px solid yellow;
 }
 .productDetails .Images .others{
   display: flex;
   height: 100px;
   gap:calc(var(--space-xs) + 0.34rem);
-  border: 1px solid black;
 }
 .productDetails .Images .others > *{
   width: 100px;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 .productDetails .Texts{
   align-self: center;
-  border: 2px solid blue;
   flex: 0 0 50%;
 
 }
 .productDetails .Texts .first {
   font-family: 'Montserrat', sans-serif;
   font-weight:var(--normal) ;
-  /* font-size: var(--fs-300); */
-  font-size:clamp(0.8rem,1.3vw + 0.3rem,1.2rem);
   line-height: 1.4;
   color: #7A7979;
+  font-size: var(--font-md);
+
 }
 .productDetails .Texts .second {
   font-family: 'Montserrat', sans-serif;
   font-weight:calc(var(--medium) + 200);
-  /* font-size: var(--fs-400); */
-  font-size:clamp(0.8rem,2vw + 0.3rem ,1.8rem);
+  font-size: calc(var(--font-md) + 1rem);
 
 }
 .productDetails .Texts .third {
   font-family: 'Montserrat', sans-serif;
   font-weight:var(--normal) ;
-  /* font-size: calc(var(--space-sm) + 0.125rem); */
-  /* font-size: var(--fs-200); */
-  font-size:clamp(0.8rem,1.3vw + 0.3rem,1.2rem);
   max-width: 40ch;
 }
 .productDetails .Texts .modes{
     display: flex;
+
 }
 .productDetails .Texts .modes span:first-child{
   align-self: center;
+
 }
 .Texts .measurements{
   display: flex;
   gap: 1rem;
   margin-top: var(--space-sm);
+
 }
 .Texts .measurements .size {
   align-self: center;
   text-decoration: underline;
   cursor: pointer;
+
 }
 .Texts .measurements .aspect-ratio {
   display: flex;
+  /* font-size:clamp(0.6rem,1.3vw + 0.3rem,1.1rem); */
+
 }
 .Texts .measurements .aspect-ratio :is(.height,.width){
   display: flex;
@@ -663,22 +660,26 @@ footer .details button:hover{
   flex-direction: column;
   border: 1px solid black;
   width: 6rem;
+
 }
 .Texts .measurements .aspect-ratio :is(.height,.width) span:first-child{
   font-family: 'Montserrat', sans-serif;
   font-weight: calc(var(--normal) + 100);
   font-size: var(--font-xs);
+
 }
 
 .Texts .measurements .aspect-ratio :is(.height,.width) .text {
   font-family: 'Montserrat', sans-serif;
   font-weight: calc(var(--medium) + 200);
+
 }
 .Texts .price {
   font-family: 'Montserrat', sans-serif;
   font-weight:calc(var(--medium) + 200);
   font-size:calc(var(--font-md) + 0.75rem);
   margin-block: var(--space-sm);
+
 }
 .Texts .cartCount{
   display: flex;
@@ -705,6 +706,7 @@ footer .details button:hover{
   border-radius: 12px;
   opacity: 0.9;
 
+
 }
 .Texts .cartButtons button:last-child{
   font-family: 'Montserrat', sans-serif;
@@ -715,12 +717,24 @@ footer .details button:hover{
   color: #fff;
   border-radius: 12px;
   opacity: 0.9;
-
 }
 
 .Texts .cartButtons button:is(:hover,:focus){
   transition: border ease-in 200ms;
   opacity: 1;
+}
+
+@media screen and (max-width:965px){
+  .productDetails{
+    flex-direction: column;
+  }
+  .productDetails .Images{
+    align-self: center;
+    width: 100%;
+  }
+  .productDetails .Texts {
+    width: 100%;
+  }
 }
 
 
