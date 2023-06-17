@@ -587,7 +587,7 @@ footer .details button:hover{
   display: flex;
   margin-inline: var(--space-xxl);
   gap: var(--space-xxl);
-  min-width: 300px;
+  min-width: 230px;
 }
 .productDetails .Images {
   flex: 0 0 40%;
@@ -728,6 +728,8 @@ footer .details button:hover{
 @media screen and (max-width:965px){
   .productDetails{
     flex-direction: column;
+    align-items: center;
+
   }
   .productDetails .Images{
     align-self: center;
