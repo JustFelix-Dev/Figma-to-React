@@ -587,6 +587,7 @@ footer .details button:hover{
   display: flex;
   margin-inline: var(--space-xxl);
   gap: var(--space-xxl);
+  min-width: 300px;
 }
 .productDetails .Images {
   flex: 0 0 40%;
@@ -615,13 +616,13 @@ footer .details button:hover{
   font-weight:var(--normal) ;
   line-height: 1.4;
   color: #7A7979;
-  font-size: var(--font-md);
+  font-size: clamp(1rem, 0.4vw + 1rem,var(--font-md));
 
 }
 .productDetails .Texts .second {
   font-family: 'Montserrat', sans-serif;
   font-weight:calc(var(--medium) + 200);
-  font-size: calc(var(--font-md) + 1rem);
+  font-size: clamp(1rem,0.9vw + 1rem,calc(var(--font-md) + 1rem));
 
 }
 .productDetails .Texts .third {
@@ -724,7 +725,7 @@ footer .details button:hover{
   opacity: 1;
 }
 
-/* @media screen and (max-width:965px){
+@media screen and (max-width:965px){
   .productDetails{
     flex-direction: column;
   }
@@ -735,7 +736,19 @@ footer .details button:hover{
   .productDetails .Texts {
     width: 100%;
   }
-} */
+}
+
+@media screen and (max-width:438px){
+   .productDetails .Images .others > * {
+    width: 80px;
+   }
+}
+
+@media screen and (max-width:375px){
+  .productDetails .Images .others > * {
+   width: 65px;
+  }
+}
 
 
 
