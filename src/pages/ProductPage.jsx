@@ -35,12 +35,12 @@ const ProductPage = () => {
        <div className="productDetails">
         <div className="Images">
             <div className="main">
-                <img src="images/product-main.png" alt="productImg" className='img-fluid' />
+                <img src="images/product-main.png" alt="productImg" className='img-fluid' height={500} />
             </div>
             <div className="others">
-                <img src="images/product-1.png" alt="productImg"  />
-                <img src="images/product-2.png" alt="productImg"  />
-                <img src="images/product-3.png" alt="productImg"  />
+                <img src="images/product-1.png" alt="productImg"  className='img-fluid' />
+                <img src="images/product-2.png" alt="productImg" className='img-fluid' />
+                <img src="images/product-3.png" alt="productImg" className='img-fluid' />
             </div>
         </div>
 

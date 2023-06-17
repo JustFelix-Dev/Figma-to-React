@@ -591,7 +591,8 @@ footer .details button:hover{
 }
 .productDetails .Images {
   border: 2px solid red;
-  flex: 0 0 50%;
+  flex: 0 0 40%;
+  width: 40%;
 }
 .productDetails .Images .main{
   display: flex;
@@ -605,30 +606,36 @@ footer .details button:hover{
   border: 1px solid black;
 }
 .productDetails .Images .others > *{
-  width: 300px;
+  width: 100px;
   flex: 1 1 auto;
 }
 .productDetails .Texts{
   align-self: center;
   border: 2px solid blue;
-  flex: 0 0 40%;
+  flex: 0 0 50%;
 
 }
 .productDetails .Texts .first {
   font-family: 'Montserrat', sans-serif;
   font-weight:var(--normal) ;
-  font-size: var(--font-md);
+  /* font-size: var(--fs-300); */
+  font-size:clamp(0.8rem,1.3vw + 0.3rem,1.2rem);
+  line-height: 1.4;
   color: #7A7979;
 }
 .productDetails .Texts .second {
   font-family: 'Montserrat', sans-serif;
   font-weight:calc(var(--medium) + 200);
-  font-size:calc(var(--font-md) + 0.75rem);
+  /* font-size: var(--fs-400); */
+  font-size:clamp(0.8rem,2vw + 0.3rem ,1.8rem);
+
 }
 .productDetails .Texts .third {
   font-family: 'Montserrat', sans-serif;
   font-weight:var(--normal) ;
-  font-size: calc(var(--space-sm) + 0.125rem);
+  /* font-size: calc(var(--space-sm) + 0.125rem); */
+  /* font-size: var(--fs-200); */
+  font-size:clamp(0.8rem,1.3vw + 0.3rem,1.2rem);
   max-width: 40ch;
 }
 .productDetails .Texts .modes{
