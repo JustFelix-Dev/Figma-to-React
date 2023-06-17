@@ -23,6 +23,12 @@ const ProductPage = () => {
         }
     }
 
+    const formatCurrency = (amount)=>{
+        return amount.toLocaleString(undefined,{
+            style : "currency",
+            currency : "USD"
+        })
+    }
   return (
        <>
        <Navbar showNav={false}/>
@@ -63,7 +69,7 @@ const ProductPage = () => {
                 </div>
             </div>
                 {
-                 <div className='price'>${price}.00</div>
+                 <div className='price'>{formatCurrency(price)}</div>
                  }
            <div className="cartCount">
             <span onClick={handleMinusCart}><img src="images/minusCart.png" alt="minusImg"/></span>
