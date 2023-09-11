@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/furniture-web-app.git
+   git clone https://github.com/JustFelix-Dev/Figma-to-React.git
 
 ## Getting Started
 
@@ -31,7 +31,24 @@ Before you begin, ensure you have met the following requirements:
 ### Installation
 
 1. Clone this repository to your local machine:
-
    ```bash
-   git clone https://github.com/your-username/furniture-web-app.git
+   git clone https://github.com/JustFelix-Dev/Figma-to-React.git
+
+2. Navigate to the project directory :
+   ```bash
+   cd Figma-to-React
+3. Install the necessary dependencies :
+    ```bash
+    npm install
+
+4. Start the development server :
+   ```bash
+   npm run dev
+
+## Technologies Used
+- React: JavaScript library for building user interfaces.
+- CSS: Styling the application.
+- Figma: Design tool used as a reference for the application's UI.
+- Other dependencies listed in package.json.
+
 
