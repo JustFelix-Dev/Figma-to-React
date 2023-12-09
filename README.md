@@ -1,4 +1,3 @@
-
 # Figma-to-React: Furniture Web Application
 
 This project is a React-based web application developed from a Figma design. It serves as a functional website for browsing and exploring furniture items. It is designed to be responsive and user-friendly.
